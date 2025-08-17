@@ -131,7 +131,11 @@ namespace Shashlichnik
         }
 #pragma warning restore 0618
 
+#if v16
         protected override void Tick()
+#else
+        public override void Tick()
+#endif
         {
             base.Tick();
             if (IsCollapsing)
